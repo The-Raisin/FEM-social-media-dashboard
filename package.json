@@ -4,7 +4,8 @@
   "description": "My solution to the challange from front end mentor",
   "main": "index.js",
   "scripts": {
-    "test": "dev"
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "dependencies": {
     "parcel": "^2.1.1",
     "sass": "^1.47.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.1.1"
   }
 }
