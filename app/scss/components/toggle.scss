@@ -2,27 +2,71 @@
 
 .toggle {
     border: none;
+    display: flex;
+    gap: rem(12);
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 0;
+    margin: 0;
+
+    @include breakpoint-down(small) {
+        justify-content: space-between;
+        gap: 0;
+        margin-top: rem(20);
+        padding-top: rem(20);
+        border-top: 1px solid var(--dark-card);
+    }
 
     &__wrapper {
-
+        height: rem(24);
+        width: rem(48);
+        position: relative;
     }
 
+    & label {
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: var(--dark-text1);
+    }
+    
     input[type="radio"] {
-         
+        opacity: 0;
+        margin: 0;
+        width: rem(21);
+        height: rem(24);
+
+        &:focus ~ .toggle__switcher {
+            border: 2px solid white;
+        }
     }
-
+    
     &__background {
-
+        display: block;
+        border-radius: rem(12);
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(225deg, var(--toggle-bg-end) 0%, var(--toggle-bg-start) 98.02%);
+        position: absolute;
+        top: 0px;
+        pointer-events: none;
     }
 
     &__switcher {
-        width: rem(16);
-        height: rem(16);
+        position: absolute;
+        left: rem(3);
+        right: 100%;
+        top: rem(3);
+        display: inline-block;
+        width: rem(18);
+        height: rem(18);
         border-radius: 50%;
-        background-color: var(--toggle);
+        background-color: var(--dark-top-bg); 
+        transition: all ease-in-out 150ms;
     }
 
-    label {
-        
+    #light:checked ~ .toggle__switcher {
+        left: calc(100% - 21px);
+        right: 3px;
     }
 }
