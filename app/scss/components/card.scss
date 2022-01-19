@@ -31,8 +31,7 @@
         border-top: rem(5) solid var(--twitter);
     }
 
-    &--instagram 
-    {
+    &--instagram{
         padding-top: rem(37);
          &::before {
             content: "";
@@ -118,8 +117,5 @@
         & img {
             margin-right: rem(4);
         }
-    }
-
-    &__number {
     }
 }
