@@ -34,10 +34,6 @@
         margin: 0;
         width: rem(21);
         height: rem(24);
-
-        &:focus ~ .toggle__switcher {
-            border: 2px solid white;
-        }
     }
     
     &__background {

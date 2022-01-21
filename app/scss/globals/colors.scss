@@ -1,7 +1,8 @@
 :root {
     --limegreen: hsl(163, 72%, 41%);
     --brightred: hsl(356, 69%, 56%);
-
+    
+    //card-top
     --facebook: hsl(208, 92%, 53%);
     --twitter: hsl(203, 89%, 53%);
     --instagram-start: hsl(37, 97%, 70%);
@@ -19,10 +20,19 @@
     --dark-text1: hsl(228, 34%, 66%);
     --dark-text2: hsl(0, 0%, 100%);
 
+    --card-hover: hsl(228, 25%, 27%);
+
     //light
     --light-bg: hsl(0, 0%, 100%); 
     --light-bg-top: hsl(225, 100%, 98%);
     --light-card: hsl(227, 47%, 96%); 
     --light-text1: hsl(228, 12%, 44%);
     --light-text2: hsl(230, 17%, 14%); 
+
+    //things for dark/light toggle 
+    --background: var(--dark-bg);
+}
+
+@media  (prefers-color-schem: dark) {
+    
 }
